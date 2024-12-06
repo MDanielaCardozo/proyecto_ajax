@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:wght@100;300;400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Kanit';
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.contacto_box {
+    width: 80%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(40, 19, 155, 0.041));
+    margin: 50px;
+    padding: 70px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    color: #3a3636;
+    background-color: rgba(2, 2, 117, 0.836);
+}
+
+.contacto_box label {
+    margin: 0.8rem;
+}
+
+.form-input {
+    border: 1px solid #3a3636;
+    border-radius: 4px;
+    padding: 0.6rem;
+}
+
+.form-select {
+    border: 1px solid #3a3636;
+    border-radius: 4px;
+    padding: 0.6rem;
+}
+
+.submit-button {
+    border-radius: 4px;
+    padding: 1rem;
+    margin-top: 1rem;
+    border: none;
+}
+
+.submit-button:hover {
+    background-color: rgba(119, 103, 189, 0.658);
+    color: aliceblue;
+}
