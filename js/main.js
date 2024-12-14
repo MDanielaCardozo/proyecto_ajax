@@ -1,3 +1,20 @@
+const getMensaje = () => {
+    const http = new XMLHttpRequest();
+    
+    http.onreadystatechange = () => {
+        console.log("onreadystatechange");
+        console.log(http.readyState);
+        console.log(http.status);
+        
+        if (http.readyState == 4 && http.status == 200) {
+            document.getElementById("mensajeAjax").innerHTML = http.responseText;
+        }   
+    };
+
+    http.open('GET', 'http://localhost/DiplomaturaUTN/Programador_Web_Avanzado/Modulo2/tp_ajax/mensaje.txt', true);
+    http.send();
+}
+
 document
   .getElementById("registroForm")
   .addEventListener("submit", function (e) {
@@ -22,8 +39,6 @@ function validarFormulario() {
   let email = document.getElementById("email").value;
   let asunto = document.getElementById("asunto").value;
   let descripcion = document.getElementById("mensaje").value;
-
-  console.log(nombre);
 
   let valid = true;
 
@@ -101,12 +116,15 @@ function validarFormulario() {
     Swal.fire({
         position: "top-center",
         icon: "success",
-        title: "Formulario enviado con éxito!",
+        title: "Formulario válido. Enviado con éxito!",
         showConfirmButton: false,
         timer: 2000
       });
+      getMensaje();
   }
 
   limpiarFormulario();
 
 }
+
+
